@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Main etsy page -->
+<html>
+  <head>
+    <title>Etsy "Clone"</title>
+    <link rel="stylesheet" href="formatting.css">
+  </head>
+  <body>
+  <!-- Search bar--> 
+  <nav class="search_bar">
+    <ul class="left_search">
+      <li>logo</li>
+      <li>search thingie</li>
+    </ul>
+    <ul class="right_search">
+      <li>Sell on Etsy</li>
+      <li>Home</li>
+      <li>Favorites</li>
+      <li>You</li>
+      <li>Cart</li>
+    </ul>
+  </nav>
+
+  <!-- Navigation bar -->
+    <nav class="top_nav">
+      <ul>
+        <li>Clothing & Accessories</li>
+        <li>Jewelery</li>
+        <li>Craft Supplies & Tools</li>
+        <li>Weddings</li>
+        <li>Entertainment</li>
+        <li>Home & Living</li>
+        <li>Kids & Baby</li>
+        <li>Vintage</li>
+      </ul>
+    </nav>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h3>Show Results for:</h3>
+    <ul>All Categories
+      <li>Home & Living</li>
+      <li>Art & Collectables</li>
+      <li>Jewelery</li>
+      <li>Craft Supplies & Tools</li>
+      <li>Weddings</li>
+      <li>Accessories</li>
+      <li>Paper & Party Supplies</li>
+      <li>Clothing</li>
+      <li>Bags & Purses</li>
+      <li>Books, Movies & Music</li>
+      <li>Bath & Beauty</li>
+      <li>Electronics & Accessories</li>
+      <li>Toys & Games</li>
+      <li>Shoes</li>
+      <li>Pet Supplies</li>
+    </ul>
+  </nav>
+<!-- Product listings -->  
+      <div class="stuff">  
+        <ul class="products">
+          <% results.each do |result| %>
+          <% binding.pry %>
+            <%= result %>
+          <% end %>
+        </ul>
+      </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <ul>
+    </ul>
+  </footer>
+  </body>
+</html>
