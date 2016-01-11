@@ -1,131 +1,114 @@
-.nav-bar {
-    text-align: center;
-    font-size: 17px;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    background-color: #FFF;
-    color: #A7A7A7;
-}
-
-.nav-bar ul {
-    list-style: none;
-    display: inline-block;
-    padding: 15px;
-    margin: 0px;
-    width: 870px;
-}
-
-.nav-bar li {
-    display: inline;
-    margin: 2px;
-}
-
-.side-bar {
-    width: 245px;
-    list-style: none;
-    padding: 12px;
-    display: block;
-    background-color: #FFFFFF;
-
-}
-
-
-.side-bar ul {
-    list-style: none;
-    padding: 0px 0px 0px 20px;
-    color: #52B5CC;
-}
-
-.side-bar h3 {
-    color: #555;
-}
-
-
-.list_items {
-    font-size: 13px;
-    display: inline-block;
-}
-
-.list-items ul {
-    list-style: none;
-    padding: 0px;
-    width: 808px;
-}
-
-.list-items li {
-    height: 245px;
-    width: 245px;
-    display: inline-block;
-    padding: 0px;
-    margin: 9px;
-    background-color: #FFF;
-}
-
-.list-items li p {
-    display: inline-block;
-}
-
-.title {
-    width: 100%;
-    height: 20px;
-    overflow: hidden;
-    margin: 0px;
-}
-
-.shop {
-    font-size: 14px;
-    color: #A7A7A7;
-}
-
-.currency{
-    float: right;
-    color: #78C042;
-}
-
-img {
-    width: 244px;
-    height: 180px;
-}
 
 body {
-    background-color: #F5F5F1;
+  background-color: #F5F5F1;
 }
 
-.middle {
-    display: inline-block;
-    float: left;
+div.topbar {
+  width: 100%;
+  height:80px;
+  border-bottom: 1px solid #E1E3DF;
+  background-color: white;
 }
 
-.middle h2 {
-    color: #555;
+div.topbar img {
+  max-width: 80px;
+  height: auto;
+  float: left;
+  vertical-align: center;
+  margin: 10px auto;
 }
 
-.lists {
-    display: inline-block;
-    float: right;
+div.topbar form {
+  float: left;
+  margin: 10px auto;
 }
 
-.lists h2 {
-    color: #555;
+div.categories {
+  height: 40px;
+  border-bottom: 1px solid #E1E3DF;
+  background-color: white;
 }
 
-.wrapper {
-    width: 1110px;
+ul#navbar {
+  margin: 0;
 }
 
-.top img {
-    margin-left: 20px;
-    width: 75px;
-    height: 60px;
+ul#navbar li {
+  display: inline;
+  float: center;
 }
 
-.top {
-    display: inline-block;
-    vertical-align: middle;
+ul#navbar li a {
+  text-decoration: none;
+  color: #8C8C8C;
 }
 
-.top form {
-    display: inline-block;
-    vertical-align: middle;
+div.sidemenu {
+  width: 20%;
+  height: auto;
+  background-color: white;
+  border-size: 1px;
+  border-style: solid;
+  border-color: #E1E3DF ;
+  float: left;
 }
+
+ul#menu {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+ul#menu li a {
+  text-decoration: none;
+  color: #0192B5;
+}
+
+div.resultsgrid {
+  width: 66%;
+  float: left;
+  display: inline-block;
+}
+
+div.searchresults {
+  width: 100%;
+  display: inline-block;
+}
+
+div.listing {
+  width: 215px;
+  height: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E1E3DF;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 4px;
+  border-bottom-color: #CBCCC9;
+  font-size: 12px;
+}
+
+img.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+div.listinfo .title {
+  width: 90%;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+div.listinfo .shop {
+  color: #AAA;
+  display: inline;
+  float: left;
+}
+
+div.listinfo .price {
+  color: #78c042;
+  display: inline;
+  float: right;
+}
+
+Status API Training Shop Blog About Pricing
