@@ -2,6 +2,7 @@ require 'pry'
 require "sinatra/base"
 require "etsiest/version"
 require "etsy"
+require "tilt/erb"
 
 Etsy.api_key = ENV["ETSY_KEY"]
 
