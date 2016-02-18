@@ -1,74 +1,77 @@
-<!DOCTYPE html>
-<!-- Main etsy page -->
+
+<DOCTYPE! html>
 <html>
   <head>
-    <title>Etsy "Clone"</title>
+    <title>Etsy Ape</title>
     <link rel="stylesheet" href="formatting.css">
   </head>
+
   <body>
-  <!-- Search bar--> 
-  <nav class="search_bar">
-    <ul class="left_search">
-      <li>logo</li>
-      <li>search thingie</li>
-    </ul>
-    <ul class="right_search">
-      <li>Sell on Etsy</li>
-      <li>Home</li>
-      <li>Favorites</li>
-      <li>You</li>
-      <li>Cart</li>
-    </ul>
-  </nav>
 
-  <!-- Navigation bar -->
-    <nav class="top_nav">
-      <ul>
-        <li>Clothing & Accessories</li>
-        <li>Jewelery</li>
-        <li>Craft Supplies & Tools</li>
-        <li>Weddings</li>
-        <li>Entertainment</li>
-        <li>Home & Living</li>
-        <li>Kids & Baby</li>
-        <li>Vintage</li>
+    <div class="topbar"> <!-- Etsy logo(inline), search bar and icons will go -->
+      <div class="logo"> <img src="http://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/0211/etsy-logo_300.jpg?itok=ZLkJzyOG"> </div>
+      <div class="searchbar">
+        <form>
+          <input type="text" placeholder="Search for items or shops" required>
+          <input type="button" value="Search">
+          </form>
+      </div>
+    </div>
+
+      <div class="categories"> <!-- This is where the categories menu will go-->
+      <ul id="navbar">
+        <li><a href="#">Clothing & Accessories</a></li>
+        <li><a href="#">Jewelry</a></li>
+        <li><a href="#">Craft Supplies & Tools</a></li>
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Home & Living</a></li>
+        <li><a href="#">Kids & Baby</a></li>
+        <li><a href="#">Vintage</a></li>
       </ul>
-    </nav>
+    </div>
+    
 
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <h3>Show Results for:</h3>
-    <ul>All Categories
-      <li>Home & Living</li>
-      <li>Art & Collectables</li>
-      <li>Jewelery</li>
-      <li>Craft Supplies & Tools</li>
-      <li>Weddings</li>
-      <li>Accessories</li>
-      <li>Paper & Party Supplies</li>
-      <li>Clothing</li>
-      <li>Bags & Purses</li>
-      <li>Books, Movies & Music</li>
-      <li>Bath & Beauty</li>
-      <li>Electronics & Accessories</li>
-      <li>Toys & Games</li>
-      <li>Shoes</li>
-      <li>Pet Supplies</li>
-    </ul>
-  </nav>
-<!-- Product listings -->  
-      <div class="stuff">  
-        <ul class="products">
-          <% results.each do |result| %>
-            <%= result %>
-          <% end %>
+    <div class="sidemenu">
+        <ul id="menu">
+          <h3>All Categories</h3>
+            <li class="list_links"><a href="https://www.etsy.com/search/home-and-living?q=death">Home & Living</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/art-and-collectibles?q=death">Art & Collectibles</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/weddings?q=death">Weddings</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/clothing?q=death">Clothing</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/paper-and-party-supplies?q=death">Paper & Party Supplies<a/></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/jewelry?q=death">Jewelry</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/accessories?q=death">Accessories</a></li>
+            <li class="list_links"><a href="Craft Supplies & Tools">Craft Supplies & Tools</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/bags-and-purses?q=death">Bags & Purses</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/bath-and-beauty?q=death">Bath & Beauty</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/shoes?q=death">Shoes</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/books-movies-and-music?q=death">Books, Movies & Music</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/electronics-and-accessories?q=death">Electronics & Accessories</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/toys-and-games?q=death">Toys & Games</a></li>
+            <li class="list_links"><a href="https://www.etsy.com/search/pet-supplies?q=death">Pet Supplies</a></li>
+          
         </ul>
       </div>
 
-  <!-- footer -->
-  <footer class="footer">
-    <ul>
-    </ul>
-  </footer>
+    <div class="resultsgrid"> <!-- This is the beginning of the results grid.  It is a self contained element that will list other elements inside of it in 3 columns -->
+      <div class="searchresults">
+        <% results.each do |result| %>
+          <div class="listing">
+              <img class="thumbnail" src="<%= result['Images'][0]['url_170x135'] %>">
+            <div class="listinfo">
+              <div class="title">
+                <%= result['title'] %></div>
+              <div class="shop">
+                <%= result['Shop']['shop_name'] %></div>
+              <div class="price">
+                <%= result['price'] %>  <%= result['currency_code'] %></div>
+            </div>
+          </div><!--end of listing class -->
+        <% end %> <!-- exits the block loop-->
+      </div> <!-- This is the end of the searchresults div -->
+    </div> <!-- This is the end of the resultsgrid class -->
+
   </body>
+
 </html>
