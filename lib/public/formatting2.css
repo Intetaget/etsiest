@@ -1,5 +1,8 @@
 ul#navbar li {
   display: inline;
   float: center;
-  color: #c0c0c0;
+
 } 
+ul#navbar li a {
+color: #c0c0c0
+}
